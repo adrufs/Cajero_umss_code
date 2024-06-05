@@ -1,18 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cajero;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- *
- * @author Daniel
+ * La clase Hora proporciona métodos para obtener la hora actual formateada.
  */
 public class Hora {
-    public static String hora(){
+
+    /**
+     * Obtiene la hora actual formateada.
+     *
+     * @return Una cadena con la hora actual formateada en el patrón "yyyy/MM/dd".
+     */
+    public static String hora() {
         LocalTime now = LocalTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         String horaFormateada = now.format(formato);
